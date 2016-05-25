@@ -1,5 +1,5 @@
-curso_envia
-===========
+Nvia Symfony meeting, easy example
+==================================
 
 This proyect was created on May 9, 2016, 4:22 pm. for a meeting in NVIA.
 
@@ -16,7 +16,10 @@ composer install
 php bin/console doctrine:database:create
 php bin/console doctrine:schema:create
 
-# To install a external bundle
-composer require "lexik/translation-bundle"
+```
 
+To install a external bundle
+
+```sh
+composer require "lexik/translation-bundle"
 ```
