@@ -74,9 +74,9 @@ class DefaultController extends Controller
      */
     public function createPostAction(Request $request)
     {
-        // just setup a fresh $task object (remove the dummy data)
         $post = new BlogPost();
 
+        // Not recommended way, only for demo...
         $form = $this->createFormBuilder($post)
             ->add('title')
             ->add('content')

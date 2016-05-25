@@ -73,6 +73,6 @@ swiftmailer:
 
 
 # Bundle configuration
-lexik_translation:
-    fallback_locale: [en]         # (required) default locale(s) to use
-    managed_locales: [en, fr, de] # (required) locales that the bundle have to manage
+#lexik_translation:
+#    fallback_locale: [en]         # (required) default locale(s) to use
+#    managed_locales: [en, fr, de] # (required) locales that the bundle have to manage
