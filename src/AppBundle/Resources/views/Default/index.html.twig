@@ -1,0 +1,44 @@
+{# blogComment \AppBundle\Entity\BlogComment #}
+{% extends '@App/_layout.html.twig' %}
+{% block col1 %}
+    asdasd
+{% endblock %}
+
+{% block main %}
+
+    <div>
+        <div class="btn-group pull-right" role="group" aria-label="...">
+            <a href="{{ path('create_post') }}" class="btn btn-info">create post</a>
+        </div>
+    </div>
+    <section>
+        {% for blogPost in blogPosts %}
+
+            <h1 style="margin-top: 30px">{{ blogPost.title }}</h1>
+
+            <div class="btn-group pull-right" role="group" aria-label="...">
+                <a href="{{ path('delete_post', { id: blogPost.id }) }}" class="btn btn-danger">Delete Post</a>
+                <a href="{{ path('create_comment', { id: blogPost.id }) }}" class="btn btn-default">create comment</a>
+            </div>
+
+            <p style="padding-top: 20px">
+                {{ blogPost.content }}
+            </p>
+            <em>{{ blogPost.createdAt | date }}</em>
+            <ul>
+                {% for blogComment in blogPost.comments %}
+                <li style="margin-top: 20px">
+                    <b>{{ blogComment.author }}</b>
+                    <blockquote>
+                        {{ blogComment.content }}
+                    </blockquote>
+
+                    <a href="{{ path('delete_comment', {id: blogComment.id }) }}" class="btn btn-default">Delete comment</a>
+                </li>
+                {% endfor %}
+            </ul>
+
+        {% endfor %}
+    </section>
+
+{% endblock %}
