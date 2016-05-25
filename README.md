@@ -25,7 +25,8 @@ php bin/console server:run
 
 Go to url http://127.0.0.1:8000/ App is ready
 
-== Playground ==
+Playground
+==========
 
 Easy install external bundles
 
